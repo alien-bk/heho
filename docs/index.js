@@ -32,15 +32,15 @@ function braddy(){
         }else {document.getElementById("help").innerHTML = (`Since you are ${personAge} brad would consider you legal and too old so he's not interested.`)}
     } 
  
-function underAge(){
-    if (personAge <= 17) {
+
         const geoFindMe = () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(success, error, geoOptions);
     } else {
         console.log("Geolocation services are not supported by your web browser.");
     }
-}
+        }
+
 
 const success = (position) => {
     const latitude = position.coords.latitude;
@@ -58,4 +58,4 @@ const geoOptions = {
     enableHighAccuracy: true,
     maximumAge: 30000,
     timeout: 27000
-} } };
+} ;
